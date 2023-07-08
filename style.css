@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    /* Text */
+    --PaleViolet: hsl(276, 100%, 81%);
+    --ModerateViolet: hsl(276, 55%, 52%);
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%);
+    --GrayishBlue: hsl(206, 6%, 79%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --DarkGrayishViolet: hsl(270, 7%, 64%);
+        /* Secondary */
+    --White: hsl(0, 0%, 100%);
+    --LightViolet: hsl(270, 20%, 96%);
+    --DarkViolet: hsl(271, 36%, 24%);
+    --LightMagenta: hsl(289, 100%, 72%);
+    --gradient1: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    --gradient2: linear-gradient(hsl(294, 60%, 93%), hsl(320, 60%, 95%));
+    --gradient3: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    --font: 'Rubik', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    font-family: var(--font);
+    padding: 0;
+    margin: 0;
+}
+
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px;
+    height: 100vh;
+    background: var(--LightViolet);
+    /* width: 100%; */
+    overflow: hidden;
+    position: relative;
+    z-index: -2;
+    /* flex-wrap: wrap; */
+}
+
+#container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 25em;
+    height: 35em;
+    background: var(--gradient1);
+    border-radius: 0 0 15em 15em;
+    -webkit-border-radius: 0 0 15em 15em;
+    -moz-border-radius: 0 0 15em 15em;
+    -ms-border-radius: 0 0 15em 15em;
+    -o-border-radius: 0 0 15em 15em;
+    z-index: -1;
+}
+
+#container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    width: 25em;
+    height: 35em;
+    background: var(--gradient2);
+    border-radius: 15em 15em 0 0;
+    -webkit-border-radius: 15em 15em 0 0;
+    -moz-border-radius: 15em 15em 0 0;
+    -ms-border-radius: 15em 15em 0 0;
+    -o-border-radius: 15em 15em 0 0;
+    z-index: -1;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.phone-cont {
+    padding-left: 125px;
+}
+
+.phone {
+    border: .8rem solid var(--White);
+    width: 16em;
+    height: max-content;
+    background: var(--LightViolet);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(107, 106, 106, 0.4);
+    padding: 0;
+}
+
+.phone .nav {
+    background: var(--gradient1);
+
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    padding: 30px 5px 5px 10px;
+    border-radius: 1.5rem 1.5rem 0.1rem 0.1rem;
+    -webkit-border-radius: 1.5rem 1.5rem 0.1rem 0.1rem;
+    -moz-border-radius: 1.5rem 1.5rem 0.1rem 0.1rem;
+    -ms-border-radius: 1.5rem 1.5rem 0.1rem 0.1rem;
+    -o-border-radius: 1.5rem 1.5rem 0.1rem 0.1rem;
+}
+
+.nav .camera {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 60%;
+    background: var(--White);
+    height: 20px;
+    border-radius: 0 0 15px 15px;
+    -webkit-border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 0 15px 15px;
+    -ms-border-radius: 0 0 15px 15px;
+    -o-border-radius: 0 0 15px 15px;
+}
+.nav i {
+    font-size: 12px;
+}
+.nav .detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--White);
+    width: 100%;
+    padding: 0 5px;
+}
+.nav .name-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--White);
+}
+
+.detail .name p {
+    font-size: 10px;
+    color: var(--PaleViolet);
+}
+.detail .name h4 {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav .name img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--White);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    position: relative;
+}
+
+.chat .leftChat {
+    max-width: 70%;
+    width: fit-content;
+    padding: 5px 8px;
+    font-size: 11px;
+    border-radius: 12px 12px 12px 5px;
+    background: hsl(276, 100%, 95%);
+    color: var(--ModerateViolet);
+    -webkit-border-radius: 12px 12px 12px 5px;
+    -moz-border-radius: 12px 12px 12px 5px;
+    -ms-border-radius: 12px 12px 12px 5px;
+    -o-border-radius: 12px 12px 12px 5px;
+    box-shadow: 5px 5px 10px rgba(107, 106, 106, 0.1);
+    /*position: absolute;
+    */
+}
+
+.chat .rightChat {
+    max-width: 70%;
+    width: fit-content;
+    padding: 5px 8px;
+    font-size: 11px;
+    border-radius: 12px 12px 5px 12px;
+    background: var(--White);
+    color: var(--DesaturatedDarkViolet);
+    box-shadow: 5px 5px 10px rgba(107, 106, 106, 0.2);
+    -webkit-border-radius: 12px 12px 5px 12px;
+    -moz-border-radius: 12px 12px 5px 12px;
+    -ms-border-radius: 12px 12px 5px 12px;
+    -o-border-radius: 12px 12px 5px 12px;
+    /*position: absolute;
+    */right: 0 !important;
+    float: right !important;
+}
+
+.rightChat.img {
+    background: transparent;
+}
+
+.chat .img {
+    display: flex;
+    gap: 10px;
+    background: transparent !important;
+}
+
+.chat img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.leftChat-pay {
+    display: flex;
+    padding: 10px 12px;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gradient3);
+    color: var(--White);
+    border-radius: 12px 12px 12px 5px;
+    max-width: 80%;
+}
+.leftChat-pay .desc {
+    display: flex;
+    font-size: 11px;
+    align-items: center;
+    gap: 5px;
+}
+.leftChat-pay .radio {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--LightMagenta);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.input {
+    background: var(--White);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+}
+.input input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.input input::placeholder {
+    color: var(--GrayishBlue);
+    font-size: 12px;
+}
+.input .submit {
+    background: var(--DarkViolet);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    position: absolute;
+    right: 3%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    font-size: 10px;
+}
+.booking {
+    padding-right: 100px;
+}
+.booking h1 {
+    margin:15px 0;
+    color: var(--VeryDarkDesaturatedViolet);
+    font-weight: 500;
+}
+
+.booking p {
+    color: var(--DarkGrayishViolet);
+    line-height: 150%;
+    font-size: 16px;
+    /* font-weight: 100; */
+}
+
+@media (max-width:500px) {
+    #container {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        overflow: scroll;
+        height: max-content;
+        /* overflow-x: hidden; */
+    }
+    #container::after {
+        right: -30%;
+        width: 20em;
+        height: 30em;
+    }
+    #container::before {
+        left: -30%;
+        width: 20em;
+        height: 30em;
+    }
+    #container .cont {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .phone-cont {
+        padding: 0;
+    }
+    .booking {
+        padding: 0;
+        text-align: center;
+    }
+}
